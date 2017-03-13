@@ -1,0 +1,105 @@
+.table {
+  margin-bottom: 15px;
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th,
+      > td {
+        vertical-align: baseline;
+      }
+    }
+  }
+}
+
+
+.oc-table {
+  margin: 2em 0 0;
+}
+
+
+
+.oc-table .table {
+
+}
+
+.oc-table .table th {
+  padding: 2px 2px 2px 8px;
+  font-size: .8em;
+  font-weight: 400;
+  border-bottom: 0;
+}
+
+.oc-table .table td {
+  border-top: 0;
+}
+
+.oc-table .table tr:nth-child(2n-1) td {
+  background: #f9f9f9;
+}
+
+.table.form-table tbody {
+  border: 1px solid #eee;
+}
+
+.table.form-table td {
+  padding: 0;
+  border-right: 1px solid #eee;
+}
+
+.table.form-table td:last-child {
+  padding: 0;
+  border-right: none;
+}
+
+.table.form-table td input,
+.table.form-table td select
+ {
+  background: transparent;
+  border: 1px solid transparent;
+  box-shadow: none;
+  transition: all .2s;
+  padding-left: 7px;
+}
+
+
+
+.table.form-table td input:focus,
+.table.form-table td select:focus {
+  background: #fff;
+  border: 1px solid #067;
+  box-shadow: inset 0 2px 0 rgba(0,0,0,0.05);
+  transition: all .2s;
+}
+
+.oc-table .col-minimize {
+  width: 1px;
+}
+
+.oc-table .col-nobr {
+  white-space: nowrap;
+}
+
+.oc-table td a {
+  display: inline-block;
+}
+
+.oc-table td a:after {
+  display: block;
+  content: "";
+  width: 100%;
+  border-bottom: 1px solid rgba(0,102,119,.15);
+  transition: border-bottom .2s;
+}
+
+.oc-table td a:hover:after {
+  display: block;
+  content: "";
+  width: 100%;
+  border-bottom: 1px solid rgba(0,102,119,1);
+  transition: border-bottom .2s;
+}
+
+.oc-table td a:hover {
+  text-decoration: none;
+}

@@ -1,0 +1,315 @@
+.form-submit {
+  background: #eee; /*#f4f8fa;*/
+  padding: 0.8em;
+  margin: 1px 0;
+  border-bottom: 0;
+}
+
+.form-inline .form-group.auto-width {
+  width: 0px;
+}
+
+.input-group.autocomplete .input-group-btn.autocomplete {
+  position: initial !important;
+}
+
+.input-group-addon.input-uom { //deprecated
+  font-size: .8em;
+  min-width: 2em;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.input-group-addon.addon-narrow {
+  font-size: .8em;
+  min-width: 2em;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+
+.form-submit {
+  padding: 0;
+  position: relative;
+  overflow: auto;
+}
+
+
+.form-group {
+  margin-bottom: 12px;
+}
+
+.form-horizontal .control-label {
+	text-align: left;
+}
+
+.control-label.control-label-nowrap {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+}
+
+input.form-control {
+	box-shadow: @jc-input-box-shadow;
+}
+
+.input-lg,
+input.input-lg[type] {
+	height: @input-height-large;
+}
+
+
+.input-group.date {
+  width: 1px;
+  position: relative;
+}
+
+.form-control.auto-width {
+  width: auto;
+  max-width: 100%;
+}
+
+.input-group.date .form-control.input-date {
+  max-width: 9em;
+  width: auto;
+  z-index: auto;
+}
+
+.input-group.date span.input-group-addon {
+  background: transparent;
+  border-color: transparent;
+  position: absolute;
+  right: 20px;
+  top: 8px;
+  z-index: 2;
+  padding: 0;
+  color: #aaa;
+}
+
+.form-control.input-time {
+
+}
+
+.form-control.input-date-time {
+
+}
+
+.form-control[disabled],
+.form-control[readonly],
+fieldset[disabled] .form-control {
+    cursor: not-allowed;
+    background-color: @form-control-disabled-bgcolor;
+    border: @form-control-disabled-border;
+    opacity: @form-control-disabled-opacity;
+    color: @form-control-disabled-color;
+    box-shadow: @form-control-disabled-box-shadow;
+}
+
+
+
+.oc-check input {
+  width: 1.6em;
+  visibility: hidden;
+  margin-top: -10px;
+  margin-bottom: -10px;
+}
+
+.oc-check input:before {
+  visibility: visible;
+  background: transparent;
+  width: 1.2em;
+  height: 1.2em;
+  content: '';
+  display: inline-block;
+  border: 1px solid #aaa;
+  border-radius: 2px;
+}
+
+.oc-check input:checked:after {
+  visibility: visible;
+  background: transparent;
+  width: 1.2em;
+  height: .6em;
+  content: '';
+  display: inline-block;
+  border: 3px solid #067;
+  border-bottom-left-radius: 2px;
+  transform: rotate(-45deg);
+  border-top: 0;
+  border-right: 0;
+  position: relative;
+  bottom: 1.75em;
+  left: .25em;
+}
+
+
+.btn.oc-check input:before {
+  margin-top: 0;
+  position: relative;
+}
+
+.btn.oc-check input:checked:after {
+  left: -1em;
+}
+
+.btn.oc-check.btn-xs input:before { top: 1px; }
+.btn.oc-check.btn-xs input:checked:after { bottom: .55em; }
+
+.btn.oc-check.btn-sm input:before { top: 1px; }
+.btn.oc-check.btn-sm input:checked:after { bottom: .55em; }
+
+.btn.oc-check input:before { top: -1px; }
+.btn.oc-check input:checked:after { bottom: .65em; }
+
+.btn.oc-check.btn-lg input:before { top: -5px; }
+.btn.oc-check.btn-lg input:checked:after { bottom: .75em; }
+
+
+.btn.btn-primary.oc-check input:before {
+  border-color: #eb7;
+}
+
+.btn.btn-primary.oc-check input:checked:after {
+  border-color: #fff;
+}
+
+
+.oc-radio input {
+  width: 1.6em;
+  visibility: hidden;
+  margin-top: -10px;
+  margin-bottom: -10px;
+}
+
+.oc-radio input:before {
+  visibility: visible;
+  background: transparent;
+  width: 1.2em;
+  height: 1.2em;
+  content: '';
+  display: inline-block;
+  border: 1px solid #aaa;
+  border-radius: 99em;
+}
+
+.oc-radio input:checked:after {
+  visibility: visible;
+  background: #067;
+  width: .7em;
+  height: .7em;
+  border-radius: 99em;
+  content: '';
+  display: inline-block;
+  position: relative;
+  bottom: 1.45em;
+  left: .25em;
+}
+
+
+.btn.oc-radio input:before {
+  margin-top: 0;
+  position: relative;
+}
+
+.btn.oc-radio input:checked:after {
+  left: -1em;
+}
+
+.btn.oc-radio.btn-xs input:before { top: .1em; }
+.btn.oc-radio.btn-xs input:checked:after { top: -.15em; left: -.95em; }
+
+.btn.oc-radio.btn-sm input:before { top: .1em; }
+.btn.oc-radio.btn-sm input:checked:after { top: -.15em; left: -.945em; }
+
+.btn.oc-radio input:before { top: -.1em; }
+.btn.oc-radio input:checked:after { top: -.35em; left: -.95em; }
+
+.btn.oc-radio.btn-lg input:before { top: -.2em; }
+.btn.oc-radio.btn-lg input:checked:after { top: -.45em; left: -.95em; }
+
+
+.btn.btn-primary.oc-radio input:before {
+  border-color: #eb7;
+}
+
+.btn.btn-primary.oc-radio input:checked:after {
+  background-color: #fff;
+}
+
+.form-group.has-overlay {
+  position: relative;
+}
+
+.btn.btn-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.form-horizontal label.control-label {
+  display: flex;
+  align-items: center;
+  padding-top: 0;
+  height: 34px;
+  line-height: 1em;
+}
+
+label.control-label select.form-control {
+  margin-top: -7px;
+  margin-left: 0;
+  padding-left: 0;
+  position: relative;
+}
+
+.form-group-justify {
+  display: table;
+  width: 100%;
+}
+
+.form-group-justify .form-group {
+  display: table-cell;
+  width: 1px;
+  white-space: nowrap;
+}
+
+/*
+.form-group-justify .form-group div,
+.form-group-justify .form-group .btn,
+.form-group-justify .form-group input,
+.form-group-justify .form-group p
+{
+  white-space: normal;
+}
+*/
+
+.form-group-justify .form-group.justify {
+  width: auto;
+}
+
+@screen-xs: 460px;
+@screen-sm: 860px;
+@screen-md: 1150px;
+@screen-lg: 1420px;
+
+@media (max-width: @screen-sm) {
+  .form-group-justify .form-group.justify {
+    position: relative;
+    top: 3px;
+  }
+}
+
+.form-group-justify .form-group:last-child {
+}
+
+.form-horizontal.form-condensed .form-group {
+  margin-bottom: 1px;
+}
+
+.form-horizontal.form-condensed label.control-label {
+  height: 30px;
+}
+
+.form-horizontal.form-condensed .form-control-static {
+    padding-top: 5px;
+}

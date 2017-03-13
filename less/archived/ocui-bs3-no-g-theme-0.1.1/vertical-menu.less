@@ -1,0 +1,771 @@
+@screen-xs: 460px;
+@screen-sm: 860px;
+@screen-md: 1065px;
+@screen-lg: 1420px;
+
+
+section.sidebar li > a:after {
+  display: none;
+}
+
+section.sidebar li > a:hover:after {
+  display: none;
+}
+
+section.sidebar li > a:hover {
+  border: none;
+}
+
+@media (max-width: @screen-sm) {
+  section.sidebar {
+    display: block;
+    width: 0%;
+    position: fixed;
+    z-index: 3;
+    border: 0;
+    background: transparent;
+    overflow-x: auto;
+    padding-bottom: 70px;
+  }
+
+  section.sidebar.active {
+    display: block;
+    width: 100%;
+  }
+
+  section.sidebar nav {
+    visibility: hidden;
+    opacity:0;
+    margin-top: 75%;
+    transition: opacity .3s, margin-top .3s;
+  }
+
+  section.sidebar.active nav {
+    z-index: 2;
+    background: transparent;
+    visibility: visible;
+    opacity: 1;
+    margin-top: 0;
+    transition: opacity .3s, margin-top .3s;
+  }
+
+
+  .sidebar nav.navbar .navbar-header,
+  .sidebar nav.navbar ul.nav.navbar-nav,
+  .sidebar nav.navbar ul.nav.navbar-nav>li
+  {
+    float: initial;
+  }
+
+  .sidebar nav.navbar .navbar-brand {
+    float: initial;
+    display: block;
+    text-align: center;
+    padding: 2em 1.5em 3em;
+    font-size: 1.25em;
+    /*background: #e70;*/
+  }
+
+  .sidebar nav.navbar ul.nav.navbar-nav.pull-down {
+    position: absolute;
+    bottom: 0;
+  }
+
+
+  .sidebar nav.navbar ul.nav.navbar-nav>li>a
+  {
+    color: #fff;
+    background: transparent;
+    text-shadow: none;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.6em;
+    position: relative;
+    vertical-align: middle;
+    padding: 1em 1.5em;
+  }
+
+  .sidebar nav.navbar ul.nav.navbar-nav>li:before {
+    content: '';
+    background: #045;
+    height: 1px;
+    display: block;
+    margin: 0em 1em;
+  }
+  .sidebar nav.navbar ul.nav.navbar-nav>li.active:before,
+  .sidebar nav.navbar ul.nav.navbar-nav>li:first-child:before,
+  .sidebar nav.navbar ul.nav.navbar-nav>li.active + li:before
+  {
+    background: transparent;
+  }
+
+  .sidebar nav.navbar ul.nav.navbar-nav>li>a span.glyphicon,
+  .sidebar nav.navbar ul.nav.navbar-nav>li>a span.fa,
+  .sidebar nav.navbar ul.nav.navbar-nav>li>a span.oci,
+  .sidebar nav.navbar ul.nav.navbar-nav>li>a span.icon
+  {
+    font-size: 2em;
+    line-height: .5em;
+    margin-right: .25em;
+
+/*
+    font-size: 1.75em;
+    position: relative;
+    vertical-align: middle;
+    padding-right: .4em;
+    margin-top: -.1em;
+    margin-bottom: 0em;
+    text-shadow: 0px -1px 0px #023;
+    */
+  }
+
+
+
+  .sidebar nav.navbar ul.nav.navbar-nav>li.active a,
+  .sidebar nav.navbar ul.nav.navbar-nav>li.open a,
+  .sidebar nav.navbar ul.nav.navbar-nav>li a:active
+  {
+    background: #023;
+  }
+
+  .sidebar nav.navbar ul.nav.navbar-nav>li.active>a:before {
+    background: #e70; /*#6bb;*/
+    width: 3px;
+    height: 100%;
+    position: absolute;
+    content:"";
+    left: 0;
+    top: 0;
+  }
+
+  .sidebar nav.navbar ul.nav.navbar-nav>li a>.badge {
+    float: right;
+    margin-top: 3px;
+    background: #023;
+    color: #fff;
+    border: 1px solid #045;
+    font-size: .8em;
+  }
+
+  .sidebar nav.navbar ul.nav.navbar-nav .dropdown-menu a>.badge {
+    float: initial;
+    margin-left: 1em;
+    right: 2.3em;
+    top: 3px;
+    position: absolute;
+  }
+
+  .sidebar nav.navbar ul.nav.navbar-nav .dropdown-menu>li>a
+  {
+    color: #fff;
+    background: transparent;
+    text-shadow: none;
+    font-size: .9em;
+    font-weight: 400;
+    line-height: 1.6em;
+    position: relative;
+    vertical-align: middle;
+    padding: 1em 1.5em 1em 5em;
+  }
+
+
+  .nav-toggle {
+    position: fixed;
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 999em;
+    background: #e70;
+    box-shadow: 0px 5px 25px rgba(0,0,0,.5);
+    transition: all .2s;
+    //z-index: 98;
+    bottom: 25px;
+    margin-left: -25px;
+    left: 50%;
+    box-sizing: border-box;
+    z-index: 2;
+  }
+
+  .nav-background {
+    position: fixed;
+    content: '';
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 999em;
+    background: #e70;
+    transition: all .2s;
+    bottom: 50px;
+    margin-left: -25px;
+    margin-bottom: -25px;
+    left: 50%;
+    z-index: -1;
+    opacity: .1;
+  }
+
+  .nav-toggle.active {
+    background: #034;
+    transition: all .2s;
+  }
+
+  .sidebar.active .nav-background {
+    width: 4000px;
+    height: 4000px;
+    border-radius: 999em;
+    background: #034;
+    transition: all .2s;
+    bottom: 50px;
+    margin-left: -2000px;
+    margin-bottom: -2000px;
+    left: 50%;
+    opacity: 1;
+  }
+
+  .nav-toggle.active:after {
+    position: fixed;
+    content: '';
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 999em;
+    background: transparent;
+    bottom: 50px;
+    margin-left: -25px;
+    margin-bottom: -25px;
+    left: 50%;
+    border: 1px solid #fff;
+  }
+
+  .nav-toggle .hamburger {
+    display: block;
+    width: 24px;
+    height: 20px;
+    margin: 15px 13px;
+    position: relative;
+  }
+
+  .nav-toggle .hamburger .bar {
+    display: block;
+    width: 100%;
+    height: 4px;
+    background: #fff;
+    position: absolute;
+    margin-left: -12px;
+    margin-top: -2px;
+    top: 10px;
+    left: 12px;
+    opacity: 1;
+    transition: all .2s;
+  }
+
+  .nav-toggle .hamburger .bar:first-child {
+    top: 2px;
+    transition: all .2s;
+  }
+
+  .nav-toggle .hamburger .bar:last-child {
+    top: 18px;
+    transition: all .2s;
+  }
+
+  .nav-toggle.active .hamburger .bar {
+    margin-left: -12px;
+    margin-top: -2px;
+    top: 10px;
+    left: 12px;
+    transition: all .2s;
+    opacity: 0;
+  }
+
+  .nav-toggle.active .hamburger .bar:first-child {
+    top: 10px;
+    transition: all .2s;
+    opacity: 1;
+    transform: rotate(45deg);
+  }
+
+  .nav-toggle.active .hamburger .bar:last-child {
+    top: 10px;
+    transition: all .2s;
+    transform: rotate(-45deg);
+    opacity: 1;
+  }
+}
+
+.sidebar nav.navbar ul.nav.navbar-nav>li>a span.glyphicon,
+.sidebar nav.navbar ul.nav.navbar-nav>li>a span.fa,
+.sidebar nav.navbar ul.nav.navbar-nav>li>a span.oci,
+.sidebar nav.navbar ul.nav.navbar-nav>li>a span.icon
+{
+  color: #6bb; //#067;
+}
+
+.sidebar nav.navbar ul.nav.navbar-nav>li.active>a span.glyphicon,
+.sidebar nav.navbar ul.nav.navbar-nav>li.active>a span.fa,
+.sidebar nav.navbar ul.nav.navbar-nav>li.active>a span.oci,
+.sidebar nav.navbar ul.nav.navbar-nav>li.active>a span.icon
+{
+  color: #fff; //#6bb;
+}
+
+
+@media (min-width: @screen-sm) {
+  section.sidebar {
+    width: 75px;
+    display: block;
+    transition: width .5s;
+    z-index: 2;
+    background: #034;
+  }
+
+  .sidebar nav.navbar {
+    background: transparent;
+    height: 100%;
+    position: relative;
+  }
+
+  .sidebar nav.navbar .navbar-header,
+  .sidebar nav.navbar ul.nav.navbar-nav,
+  .sidebar nav.navbar ul.nav.navbar-nav>li
+  {
+    float: initial;
+  }
+
+  .sidebar nav.navbar ul.nav.navbar-nav {
+    padding: 0;
+    margin: 0;
+  }
+
+  .sidebar nav.navbar .navbar-brand {
+    float: initial;
+    display: block;
+    text-align: center;
+    padding: 2em 0em 3em;
+    font-size: 1em;
+    /*background: #e70;*/
+  }
+
+  .sidebar nav.navbar ul.nav.navbar-nav.pull-down {
+    position: absolute;
+    bottom: 0;
+  }
+
+
+  .sidebar nav.navbar ul.nav.navbar-nav>li>a
+  {
+    color: #fff;
+    background: transparent;
+    text-shadow: none;
+    font-size: .9em;
+    font-weight: 300;
+    line-height: 1.6em;
+    position: relative;
+    vertical-align: middle;
+    padding: 1em 0;
+    text-align: center;
+  }
+
+  .sidebar nav.navbar ul.nav.navbar-nav>li:before {
+    content: '';
+    background: #045;
+    height: 1px;
+    display: block;
+    margin: 0em .5em;
+  }
+  .sidebar nav.navbar ul.nav.navbar-nav>li.active:before,
+  .sidebar nav.navbar ul.nav.navbar-nav>li:first-child:before,
+  .sidebar nav.navbar ul.nav.navbar-nav>li.active + li:before
+  {
+    background: transparent;
+  }
+
+
+  .sidebar nav.navbar ul.nav.navbar-nav>li>a span.glyphicon,
+  .sidebar nav.navbar ul.nav.navbar-nav>li>a span.fa,
+  .sidebar nav.navbar ul.nav.navbar-nav>li>a span.oci,
+  .sidebar nav.navbar ul.nav.navbar-nav>li>a span.icon
+  {
+    font-size: 3em;
+    line-height: 1em;
+    margin: 0 0 .2em;
+    display: block;
+    text-align: center;
+      /*
+    position: relative;
+    vertical-align: middle;
+    padding-right: 0;
+    margin-top: -.1em;
+    margin-bottom: 0em;
+    text-shadow: 0px -1px 0px #023;
+    */
+  }
+
+
+
+  .sidebar nav.navbar ul.nav.navbar-nav>li.active>a,
+  .sidebar nav.navbar ul.nav.navbar-nav>li.open>a,
+  .sidebar nav.navbar ul.nav.navbar-nav>li>a:hover,
+  .sidebar nav.navbar ul.nav.navbar-nav>li>a:active
+  {
+    background: #023;
+  }
+
+  .sidebar nav.navbar ul.nav.navbar-nav>li.active>a:before {
+    background: #e70; /*#6bb;*/
+    width: 3px;
+    height: 100%;
+    position: absolute;
+    content:"";
+    left: 0;
+    top: 0;
+  }
+
+  .sidebar nav.navbar ul.nav.navbar-nav>li>a>.badge {
+    position: absolute;
+    top: 5px;
+    right: 2px;
+    background: #023;
+    color: #fff;
+    border: 1px solid #045;
+    font-size: .8em;
+  }
+
+  .sidebar nav.navbar ul.nav.navbar-nav .dropdown-menu a>.badge {
+    position: initial;
+    float: initial;
+    margin-left: 1em;
+    top: 5px;
+    background: #023;
+    color: #fff;
+    border: 1px solid #045;
+    font-size: .8em;
+  }
+
+  .sidebar nav.navbar ul.nav.navbar-nav li.dropdown.bottom-aligned {
+    position: initial;
+  }
+  .sidebar nav.navbar ul.nav.navbar-nav li.dropdown.bottom-aligned .dropdown-menu {
+    top: initial;
+    bottom: 3em;
+  }
+
+
+  .sidebar nav.navbar ul.nav.navbar-nav .dropdown-menu {
+    left: 100%;
+    top: 0;
+    overflow: hidden;
+    background: #023;
+    border: 0;
+    padding: 6px 0;
+    position: absolute;
+  }
+
+  .dropdown .dropdown-menu {
+    display: block;
+    opacity: 0;
+    width: 0px;
+    min-width: 0px;
+    white-space: nowrap;
+
+    -moz-transition:    all 200ms;
+    -webkit-transition: all 200ms;
+    -o-transition:      all 200ms;
+    -ms-transition:     all 200ms;
+    transition:         all 200ms;
+  }
+
+  .dropdown.open .dropdown-menu {
+    white-space: normal;
+    display: block;
+    opacity: 1;
+    width: auto;
+    min-width: 200px;
+  }
+
+  .sidebar .dropdown-menu .user-image img {
+      margin: 0px 6px 6px;
+      max-width: 200px;
+  }
+
+  .sidebar .dropdown-menu li .btn-default {
+    background: transparent;
+    border: 1px solid #067;
+    color: #fff;
+    margin-left: 20px;
+    font-weight: 300;
+    box-shadow: inset 0px -2px 0px #000;
+  }
+
+  .sidebar nav.navbar ul.nav.navbar-nav .dropdown-menu a {
+    color: #fff;
+    padding: 6px 20px;
+  }
+
+  .sidebar nav.navbar ul.nav.navbar-nav .dropdown-menu li.dropdown-header {
+    color: #6bb;
+    padding: 6px 20px;
+  }
+
+  .sidebar nav.navbar ul.nav.navbar-nav .dropdown-menu li.dropdown-header:first-child {
+    padding-top: 12px;
+  }
+
+  .sidebar nav.navbar ul.nav.navbar-nav .dropdown-menu a:hover,
+  .sidebar nav.navbar ul.nav.navbar-nav .dropdown-menu a.active
+   {
+    background: #034;
+  }
+
+  .sidebar nav.navbar ul.nav.navbar-nav .dropdown-menu a.no-hover:hover {
+    background: transparent;
+  }
+  .sidebar nav.navbar ul.nav.navbar-nav .dropdown-menu .divider {
+    background-color: #034;
+  }
+
+
+
+
+
+}
+
+/* @media (min-width: @screen-md) {
+  section.sidebar {
+    width: 150px;
+    transition: width .5s;
+  }
+
+  .sidebar nav.navbar ul.nav.navbar-nav>li>a span.glyphicon,
+  .sidebar nav.navbar ul.nav.navbar-nav>li>a span.fa,
+  .sidebar nav.navbar ul.nav.navbar-nav>li>a span.oci,
+  .sidebar nav.navbar ul.nav.navbar-nav>li>a span.icon
+  {
+    display: inline;
+  }
+
+
+  .sidebar nav.navbar ul.nav.navbar-nav>li>a
+  {
+    text-align: left;
+    padding: .75em 1em;
+  }
+
+  .sidebar nav.navbar ul.nav.navbar-nav>li>a .badge
+  {
+    position: static;
+    float: right;
+    top: initial;
+    right: initial;
+    margin-top: 3px;
+  }
+
+
+}*/
+
+@media (min-width: @screen-lg) {
+  section.sidebar {
+    width: 200px;
+    transition: width .5s;
+  }
+
+  .sidebar nav.navbar {
+    background: transparent;
+    height: 100%;
+    position: relative;
+  }
+
+  .sidebar nav.navbar .navbar-header,
+  .sidebar nav.navbar ul.nav.navbar-nav,
+  .sidebar nav.navbar ul.nav.navbar-nav>li
+  {
+    float: initial;
+  }
+
+  .sidebar nav.navbar .navbar-brand {
+    float: initial;
+    display: block;
+    text-align: center;
+    padding: 2em 1.5em 3em;
+    font-size: 1.25em;
+    /*background: #e70;*/
+  }
+
+  .sidebar nav.navbar ul.nav.navbar-nav.pull-down {
+    position: absolute;
+    bottom: 0;
+  }
+
+
+  .sidebar nav.navbar ul.nav.navbar-nav>li>a
+  {
+    color: #fff;
+    background: transparent;
+    text-shadow: none;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.6em;
+    position: relative;
+    vertical-align: middle;
+    text-align: left;
+    padding: 1em 1.5em;
+  }
+
+
+
+
+
+  .sidebar nav.navbar ul.nav.navbar-nav>li:before {
+    content: '';
+    background: #045;
+    height: 1px;
+    display: block;
+    margin: 0em 1em;
+  }
+  .sidebar nav.navbar ul.nav.navbar-nav>li.active:before,
+  .sidebar nav.navbar ul.nav.navbar-nav>li:first-child:before,
+  .sidebar nav.navbar ul.nav.navbar-nav>li.active + li:before
+  {
+    background: transparent;
+  }
+
+
+
+
+  .sidebar nav.navbar ul.nav.navbar-nav>li>a span.glyphicon,
+  .sidebar nav.navbar ul.nav.navbar-nav>li>a span.fa,
+  .sidebar nav.navbar ul.nav.navbar-nav>li>a span.oci,
+  .sidebar nav.navbar ul.nav.navbar-nav>li>a span.icon
+  {
+    display: inline;
+    font-size: 2em;
+    line-height: .5em;
+    margin-right: .25em;
+    /*
+    font-size: 1.75em;
+    position: relative;
+    vertical-align: middle;
+    padding-right: .4em;
+    margin-top: -.1em;
+    margin-bottom: 0em;
+    text-shadow: 0px -1px 0px #023;
+    */
+  }
+
+
+  .sidebar nav.navbar ul.nav.navbar-nav>li.active>a,
+  .sidebar nav.navbar ul.nav.navbar-nav>li.open>a,
+  .sidebar nav.navbar ul.nav.navbar-nav>li>a:hover,
+  .sidebar nav.navbar ul.nav.navbar-nav>li>a:active
+  {
+    background: #023;
+  }
+
+  .sidebar nav.navbar ul.nav.navbar-nav>li.active>a:before {
+    background: #e70; /*#6bb;*/
+    width: 3px;
+    height: 100%;
+    position: absolute;
+    content:"";
+    left: 0;
+    top: 0;
+  }
+
+  .sidebar nav.navbar ul.nav.navbar-nav>li a>.badge {
+    position: static;
+    float: right;
+    top: initial;
+    right: initial;
+    margin-top: 3px;
+    background: #023;
+    color: #fff;
+    border: 1px solid #045;
+    font-size: .8em;
+  }
+
+  .sidebar nav.navbar ul.nav.navbar-nav .dropdown-menu a>.badge {
+    float: initial; margin-left: 1em;
+  }
+
+  .sidebar nav.navbar ul.nav.navbar-nav li.dropdown.bottom-aligned {
+    position: initial;
+  }
+  .sidebar nav.navbar ul.nav.navbar-nav li.dropdown.bottom-aligned .dropdown-menu {
+    top: initial;
+    bottom: 3em;
+  }
+
+
+  .sidebar nav.navbar ul.nav.navbar-nav .dropdown-menu {
+    left: 100%;
+    top: 0;
+    overflow: hidden;
+    background: #023;
+    border: 0;
+    padding: 6px 0;
+  }
+
+  .dropdown .dropdown-menu {
+    display: block;
+    opacity: 0;
+    width: 0px;
+    min-width: 0px;
+    white-space: nowrap;
+
+    -moz-transition:    all 200ms;
+    -webkit-transition: all 200ms;
+    -o-transition:      all 200ms;
+    -ms-transition:     all 200ms;
+    transition:         all 200ms;
+  }
+
+  .dropdown.open .dropdown-menu {
+    white-space: normal;
+    display: block;
+    opacity: 1;
+    width: auto;
+    min-width: 200px;
+  }
+
+  .sidebar .dropdown-menu .user-image img {
+      margin: 0px 6px 6px;
+      max-width: 200px;
+  }
+
+  .sidebar .dropdown-menu li .btn-default {
+    background: transparent;
+    border: 1px solid #067;
+    color: #fff;
+    margin-left: 20px;
+    font-weight: 300;
+    box-shadow: inset 0px -2px 0px #000;
+  }
+
+  .sidebar nav.navbar ul.nav.navbar-nav .dropdown-menu a {
+    color: #fff;
+    padding: 6px 20px;
+  }
+
+  .sidebar nav.navbar ul.nav.navbar-nav .dropdown-menu li.dropdown-header {
+    color: #6bb;
+    padding: 6px 20px;
+  }
+
+  .sidebar nav.navbar ul.nav.navbar-nav .dropdown-menu li.dropdown-header:first-child {
+    padding-top: 12px;
+  }
+
+  .sidebar nav.navbar ul.nav.navbar-nav .dropdown-menu a:hover,
+  .sidebar nav.navbar ul.nav.navbar-nav .dropdown-menu a.active
+   {
+    background: #034;
+  }
+
+  .sidebar nav.navbar ul.nav.navbar-nav .dropdown-menu a.no-hover:hover {
+    background: transparent;
+  }
+  .sidebar nav.navbar ul.nav.navbar-nav .dropdown-menu .divider {
+    background-color: #034;
+  }
+
+
+}

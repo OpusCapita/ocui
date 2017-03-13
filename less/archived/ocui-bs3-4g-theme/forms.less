@@ -1,0 +1,36 @@
+.form-group {
+  margin-bottom: 12px;
+}
+
+.form-horizontal .control-label {
+	text-align: left;
+}
+
+.control-label.control-label-nowrap {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+}
+
+input.form-control {
+	box-shadow: @jc-input-box-shadow;
+  border: @jc-input-border;
+}
+
+.input-lg,
+input.input-lg[type] {
+	height: @input-height-large;
+}
+
+
+.form-control[disabled],
+.form-control[readonly],
+fieldset[disabled] .form-control {
+    cursor: not-allowed;
+    background-color: @form-control-disabled-bgcolor;
+    border: @form-control-disabled-border;
+    opacity: @form-control-disabled-opacity;
+    color: @form-control-disabled-color;
+    box-shadow: @form-control-disabled-box-shadow;
+}

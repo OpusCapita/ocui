@@ -1,0 +1,63 @@
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  position: relative;
+  /*padding-bottom: 90px;  !!! height of footer */
+}
+
+body.popup {
+  padding-bottom: 0; /* no footer -> no padding */
+}
+
+body.sellside {
+  padding-bottom: 300px;
+}
+
+footer {
+  bottom: auto;
+  position: absolute;
+  height: 4em;
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+  /*border-left: 3px solid #ccc;
+  border-right: 3px solid #ccc;*/
+  color: @jc-footer-color;
+  background: @jc-footer-background;
+  padding: @jc-footer-padding;
+  overflow: hidden;
+}
+
+footer:before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 1em;
+  right: 1em;
+  height: 1px;
+  background: #eee;
+}
+
+footer.sellside {
+  border-top: @jc-footer-sellside-border-top;
+  background: @jc-footer-sellside-background;
+  padding: @jc-footer-sellside-padding;
+  margin: @jc-footer-sellside-margin;
+}
+
+footer .copyright {
+  border-top: @jc-footer-copyright-border-top;
+  padding: @jc-footer-copyright-padding; //1em 0;
+}
+
+footer .release-info {
+  position: absolute;
+  right: 1em;
+  top: 1.8em;
+  font-size: .8em;
+  text-align: right;
+}

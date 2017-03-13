@@ -1,0 +1,79 @@
+dl.label {
+	margin: 0 .35em .35em 0;
+}
+
+dl.label dt {
+	font-weight: 400;
+}
+
+dl.label dt:first-child:after {
+	content: ":";
+}
+
+dl.label dd:first-child:after {
+	content: " ";
+}
+
+dl.label dd, dl.label dt {
+	padding: 0;
+}
+
+.label.label-default {
+	color: @label-default-color;
+	background: @label-default-bg;
+	border: @label-default-border;
+}
+
+.label.label-primary {
+	color: @label-primary-color;
+	background: @label-primary-bg;
+	border: @label-primary-border;
+}
+
+.label.label-info {
+	color: @label-info-color;
+	background: @label-info-bg;
+	border: @label-info-border;
+}
+
+.label.label-success {
+	color: @label-success-color;
+	background: @label-success-bg;
+	border: @label-success-border;
+}
+
+.label.label-warning {
+	color: @label-warning-color;
+	background: @label-warning-bg;
+	border: @label-warning-border;
+}
+
+.label.label-danger {
+	color: @label-danger-color;
+	background: @label-danger-bg;
+	border: @label-danger-border;
+}
+
+h1 small .label {
+	padding: .05em .3em .1em;
+	font-size: .7em;
+}
+
+.label-square {
+	display: inline-block;
+
+}
+
+h1 .label-square {
+	min-width: 34px;
+	height: 34px;
+	font-size: 14px;
+	line-height: 27px;
+	bottom: 10px;
+	position: relative;
+}
+
+.row > dl.label {
+	margin-right: 0px;
+	margin-left: 15px;
+}

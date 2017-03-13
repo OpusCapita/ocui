@@ -1,0 +1,63 @@
+.btn {
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    pointer-events: auto;
+  }
+  &:active,
+  &:focus,
+  &.active {
+    &:focus {
+      outline: 0;
+    }
+  }
+}
+
+.btn-default {
+  color:  @jc-btn-default-color;
+  border:  @jc-btn-default-border;
+
+	background: @jc-btn-default-background;
+	box-shadow: @jc-btn-default-box-shadow;
+  border-radius: @jc-btn-default-border-radius;
+}
+
+.btn-default:active,
+.btn-default.active,
+.btn-default.open,
+.open .dropdown-toggle.btn-default {
+	border-color: @jc-btn-default-active-border-color;
+	background: @jc-btn-default-active-background;
+  box-shadow: @jc-btn-default-active-box-shadow;
+}
+
+.btn-default:hover {
+	border-color: @jc-btn-default-hover-border-color;
+	background: @jc-btn-default-hover-background;
+  box-shadow: @jc-btn-default-hover-box-shadow;
+}
+
+.btn-primary {
+  background: @jc-btn-primary-background;
+	box-shadow: @jc-btn-primary-box-shadow;
+  border: @jc-btn-primary-border;
+  color: @jc-btn-primary-color;
+  border-radius: @jc-btn-primary-border-radius;
+}
+
+.btn-primary.active,
+.btn-primary:active
+.btn-primary.open,
+.open .dropdown-toggle.btn-primary {
+  background: @jc-btn-primary-active-background;
+	box-shadow: @jc-btn-primary-active-box-shadow;
+  border: @jc-btn-primary-active-border;
+  color: @jc-btn-primary-active-color;
+}
+
+.btn-primary:hover {
+  background: @jc-btn-primary-hover-background;
+	box-shadow: @jc-btn-primary-hover-box-shadow;
+  border: @jc-btn-primary-hover-border;
+  color: @jc-btn-primary-hover-color;
+}

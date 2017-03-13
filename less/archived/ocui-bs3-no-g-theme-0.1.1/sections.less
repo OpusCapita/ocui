@@ -1,0 +1,132 @@
+.applogo {
+  padding: 1.5em 0;
+  text-align: center;
+  // background: #f9f9f9;
+  margin: 0 1em 0;
+  border-bottom: 1px solid #eee;
+}
+
+.applogo img {
+  width: 25%;
+  max-height: 2em;
+}
+
+body {
+  display: block;
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  margin:0;
+  padding: 0;
+}
+
+section.sidebar {
+  background: #034;
+  float: left;
+  height: 100%;
+  border-right: 3px solid #023;
+  width: 0px;
+}
+
+section.content {
+  height: 100%;
+  overflow: auto;
+  position: relative;
+  padding:0;
+  margin: 0;
+}
+
+section.content .content-wrap {
+  padding: 0;
+  min-height: 100%;
+  box-sizing: border-box;
+  /* equal to footer height */
+  margin-bottom: -4em;
+}
+
+section.content .content-wrap:after {
+  content: "";
+  display: block;
+}
+footer, section.content .content-wrap:after {
+  /* .push must be the same height as footer */
+  height: 4em;
+}
+
+section.context {
+  display: none;
+  top: 0;
+  position: fixed;
+  right: 0;
+  width: 600px;
+  background: #fff; /*rgba(255,255,255,.90);/*#034;*/
+  height: 100%;
+  border-left: 3px solid #e70;
+  box-shadow: 0px 0px 25px rgba(0,0,0,.25);
+  z-index: 99;
+  padding: 0em 2em;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+
+
+section.context.open {
+  display: block;
+}
+
+section.header {
+  margin: 1.5em 0 0;
+}
+
+.extended-search {
+  margin: 1.5em 0 0;
+}
+
+section.search {
+  margin-bottom: 1em;
+}
+
+section.header.header-pim-product {
+
+}
+
+section.header.header-pim-product h1 {
+  font-size: 1.5em;
+  font-weight: 400;
+  position: relative;
+}
+
+section.header.header-pim-product h1 .thumb {
+  float: left;
+  width: auto;
+  margin-right: .5em;
+  position: relative;
+}
+
+section.header.header-pim-product h1 .thumb img.img-responsive {
+  max-width: 85px;
+  max-height: 85px;
+}
+
+section.header.header-pim-product h1 .product {
+  position: relative;
+}
+
+
+
+section.header.header-pim-product h1 .control-bar {
+  z-index: 2;
+  top: -3px;
+}
+
+section.header.header-pim-product h1 .product .control-bar {
+  display: inline-block;
+  margin-bottom: 0;
+  margin-left: .5em;
+}
+
+section.header.header-pim-product h1 .control-bar .dropdown-menu {
+  z-index: 20;
+
+}

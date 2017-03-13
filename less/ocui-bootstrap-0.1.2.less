@@ -1,0 +1,55 @@
+
+// ABOUT THIS FILE
+// =================
+// The OCCUI CSS is compiled from an extended and customized
+// Bootstrap 3.1.1 LESS source. It consists of the following components:
+//
+// - Bootstrap 3 LESS core files
+// - External extensions and plugins
+// - OCUI theme
+// - Customization Theme
+//
+// In this file, the three main components core, oc-theme and customization
+// are compiled into a single css file.
+
+
+// Bootstrap 3.1.1
+// -----------------
+// Twitter Bootstrap, vanilla condition, no changes made.
+//
+// Path needs to be updated with every Bootstrap update.
+// Every update requires a full UI test.
+//
+// NOTE: bootstrap.less has been modified in lines 6 and 7,
+// re-routing mixins and variables to the less root folder.
+@import "bs3-core/bootstrap.less";
+
+// DEPRECATED!
+// jCatalog Boostrap Extensions 1.5.1
+// -----------------------------------
+// Extensions to Bootstrap made by jCatalog
+//
+// Every update/change requires a full unit test.
+// THIS HAS BEEN DROPPED: Extensions and theme have been merged, starting from theme 0.1.2
+//
+//@import "jcui-bs3-extensions/bs3-extensions.less";
+
+
+// OCUI Bootstrap Theme 0.1.2
+// ----------------------------
+// jCatalog UI 8 Bootstrap theme.
+//
+// Every update/change requires a full unit test.
+//
+//@import "jcui-bs3-theme/bs3-theme.less";
+//@import "ocui-bs3-4g-theme/bs3-theme.less";
+//@import "ocui-bs3-5g-theme/bs3-theme.less";
+@import "ocui-0.1.2/bs3-theme.less";
+
+
+// OCUI Bootstrap Customization Theme
+// ------------------------------------
+//
+// Every update/change requires a full unit test.
+//
+@import "customization-theme/customization.less";

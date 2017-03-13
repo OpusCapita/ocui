@@ -1,0 +1,46 @@
+.time-feed {
+  margin: 5em;
+  position: relative;
+}
+
+.time-feed .progress {
+  position: relative;
+  height: 2px;
+  background: #eee;
+}
+
+.time-feed .progress-bar {
+  background: #067;
+  height: 2px;
+}
+
+
+.time-feed .event {
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 16px;
+  background: #eee;
+  position: absolute;
+  top: 50%;
+  margin-top: -8px;
+  margin-left: -8px;
+}
+
+.time-feed .event.done {
+  background: #067;
+}
+
+.time-feed .event .tooltip {
+  opacity: 1;
+  top: 50%;
+  margin-top: 0px;
+  width: 120px;
+  margin-left: -52px;
+  margin-top: 10px;
+  border-radius: 3px;
+
+}
+
+.time-feed .event .tooltip .tooltip-arrow { border-bottom-color: #ccc; }
+.time-feed .event .tooltip .tooltip-inner { background: #ccc; color: #333; }
